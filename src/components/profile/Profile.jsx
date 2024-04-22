@@ -1,8 +1,7 @@
 import React from "react";
 import Styles from "../../styles/Profile.module.css";
 
-import MiniSections from "./MiniSections";
-import Name from "./Name";
+import { MiniSections, Name } from "../index";
 
 import { InitialContext } from "../../App";
 import useValidatedContext from "../../utility/useValidatedContext";

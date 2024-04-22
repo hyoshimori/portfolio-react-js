@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "./Logo";
+import { Logo } from "../../components";
 // import NightMode from "./NightMode";
 import Styles from "../../styles/Header.module.css";
 

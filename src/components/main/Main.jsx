@@ -1,9 +1,7 @@
 import React from "react";
 import { Link, Routes, Route } from "react-router-dom";
 
-import About from "./displayedContent/About";
-import PersonalTimeline from "./displayedContent/PersonalTimeline";
-import ProfessionalTimeline from "./displayedContent/ProfessionalTimeline";
+import { About, PersonalTimeline, ProfessionalTimeline } from "../index";
 
 import Styles from "../../styles/Main.module.css";
 

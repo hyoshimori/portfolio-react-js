@@ -1,10 +1,7 @@
 import React, { createContext, useState, useEffect, useReducer } from "react";
 import "./App.css";
-import Banner from "./components/banner/Banner";
-import Header from "./components/header/Header";
-import Profile from "./components/profile/Profile";
-import Main from "./components/main/Main";
-import Footer from "./components/footer/Footer";
+
+import { Banner, Footer, Header, Main, Profile } from "./components/index";
 
 import defaultPostProps from "../src/store/InitialView";
 import { BrowserRouter } from "react-router-dom";
