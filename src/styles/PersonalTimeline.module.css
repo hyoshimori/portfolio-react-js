@@ -11,7 +11,7 @@
 }
 
 .post:hover {
-    background-color: #343b43;
+    background-color: #f3f3f3;
     transition: 0.3s;
 }
 
@@ -23,7 +23,7 @@
 
 .icon img {
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2px solid #eeeeee;
     height: 50px;
     width: 50px;
     margin: 10px 20px;
@@ -46,17 +46,12 @@
 
 .emotion {
     background-color: #343b43;
+    color: white;
     width: fit-content;
     padding: 5px 10px;
     border-radius: 10px;
     margin: 10px 0px;
     transition: 0.3s;
-}
-
-.emotion:hover {
-    background-color: #3c7e7d;
-    transition: 0.3s;
-    cursor: pointer;
 }
 
 .title {
