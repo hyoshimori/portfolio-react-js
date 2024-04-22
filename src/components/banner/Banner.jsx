@@ -7,7 +7,7 @@ import useValidatedContext from "../../utility/useValidatedContext";
 const Banner = () => {
     const context = useContext(InitialContext);
 
-    const arrOfKeys = ["imageURL", "bannerImageURL"];
+    const arrOfKeys = ["bannerImageURL"];
     const targetProps = "profileProps";
 
     const objObValues = useValidatedContext(
@@ -17,7 +17,6 @@ const Banner = () => {
     );
 
     const [bannerLoaded, setBannerLoaded] = useState(false);
-    const [profileLoaded, setProfileLoaded] = useState(false);
 
     if (!objObValues) {
         return <></>;
@@ -35,16 +34,6 @@ const Banner = () => {
         setBannerLoaded(false);
     };
 
-    const handleProfileLoad = () => {
-        dispatch({ type: "true", payload: "profileImage" });
-        setProfileLoaded(true);
-    };
-
-    const handleProfileError = () => {
-        console.error("Failed to load profile image.");
-        setProfileLoaded(false);
-    };
-
     return (
         <div className={Styles.body}>
             <img
@@ -54,14 +43,6 @@ const Banner = () => {
                 onLoad={handleBannerLoad}
                 onError={handleBannerError}
                 style={{ display: bannerLoaded ? "block" : "none" }}
-            />
-            <img
-                className={Styles.profile_image}
-                src={objObValues.imageURL}
-                alt=""
-                onLoad={handleProfileLoad}
-                onError={handleProfileError}
-                style={{ display: profileLoaded ? "block" : "none" }}
             />
         </div>
     );

@@ -7,6 +7,7 @@ import Main from "./components/main/Main";
 import Footer from "./components/footer/Footer";
 
 import defaultPostProps from "../src/store/InitialView";
+import { BrowserRouter } from "react-router-dom";
 
 // Color Palette
 // https://coolors.co/292f36-4ecdc4-f7fff7-ff6b6b-ffe66d
@@ -74,13 +75,15 @@ function App(props) {
         <InitialProvider
             value={{ initialProps, setInitialProps, state, dispatch }}
         >
-            <div className="app">
-                <Header />
-                <Banner />
-                <Profile />
-                <Main />
-                <Footer />
-            </div>
+            <BrowserRouter>
+                <div className="app">
+                    <Header />
+                    <Banner />
+                    <Profile />
+                    <Main />
+                    <Footer />
+                </div>
+            </BrowserRouter>
         </InitialProvider>
     );
 }
