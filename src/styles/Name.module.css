@@ -1,6 +1,7 @@
 .body {
     display: flex;
     align-items: center;
+    margin-bottom: 40px;
 }
 
 .name {
@@ -24,4 +25,14 @@
 
 .git_link svg {
     margin-right: 5px;
+}
+
+.profile_image {
+    border-radius: 50%;
+    border: 2px solid white;
+    height: 100px;
+    left: 10%;
+    object-fit: cover;
+    width: 100px;
+    margin-right: 20px;
 }

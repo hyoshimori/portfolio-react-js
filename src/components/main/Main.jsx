@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link, Routes, Route } from "react-router-dom";
 
 import About from "./displayedContent/About";
 import PersonalTimeline from "./displayedContent/PersonalTimeline";
@@ -7,25 +8,34 @@ import ProfessionalTimeline from "./displayedContent/ProfessionalTimeline";
 import Styles from "../../styles/Main.module.css";
 
 const Main = () => {
-    const [view, setView] = useState("personalTimeline");
-
     return (
         <>
             <div className={Styles.main}>
-                <div onClick={() => setView("personalTimeline")}>Personal</div>
-                <div onClick={() => setView("professionalTimeline")}>
-                    Professional
+                <div className={Styles.links}>
+                    <Link to="/personal_timeline">
+                        <div>Personal</div>
+                    </Link>
+                    <Link to="/professional_timeline">
+                        <div>Professional</div>
+                    </Link>
+                    <Link to="/about">
+                        <div>About</div>
+                    </Link>
                 </div>
-                <div onClick={() => setView("about")}>About</div>
             </div>
             <div className={Styles.body}>
-                <div>
-                    {view === "personalTimeline" && <PersonalTimeline />}
-                    {view === "professionalTimeline" && (
-                        <ProfessionalTimeline />
-                    )}
-                    {view === "about" && <About />}
-                </div>
+                <Routes>
+                    <Route
+                        path="/personal_timeline"
+                        element={<PersonalTimeline />}
+                    />
+                    <Route
+                        path="/professional_timeline"
+                        element={<ProfessionalTimeline />}
+                    />
+                    <Route path="/about" element={<About />} />
+                    <Route path="*" element={<PersonalTimeline />} />{" "}
+                </Routes>
             </div>
         </>
     );
