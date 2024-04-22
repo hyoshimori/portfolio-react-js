@@ -1,0 +1,18 @@
+.job {
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.job:hover {
+    background-color: #343b43;
+    transition: 0.3s;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.body {
+    padding: 0px 20px;
+}

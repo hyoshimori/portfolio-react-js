@@ -1,0 +1,24 @@
+.body {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+}
+
+.banner_image {
+    height: 200px;
+    margin-bottom: 100px;
+    max-width: 700px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.profile_image {
+    border-radius: 50%;
+    border: 2px solid white;
+    height: 130px;
+    left: 10%;
+    object-fit: cover;
+    position: absolute;
+    top: 130px;
+    width: 130px;
+}

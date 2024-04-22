@@ -1,0 +1,9 @@
+.body {
+    max-width: 600px;
+    padding: 0px 20px;
+}
+
+.profile_description {
+    margin-top: 10px;
+    font-weight: 700;
+}

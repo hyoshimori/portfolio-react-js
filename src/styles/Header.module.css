@@ -1,0 +1,18 @@
+.body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0px;
+    background-color: #3c7e7d;
+}
+
+.git_link {
+    color: white;
+    transition: 0.3s;
+}
+
+.git_link:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}

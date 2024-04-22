@@ -1,0 +1,32 @@
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0px 0px 0px;
+}
+
+.each_mini_section {
+    display: flex;
+    align-items: center;
+}
+
+.each_mini_section div {
+    margin-left: 10px;
+}
+
+.LinkIcon,
+.instagram_link {
+    color: white;
+    transition: 0.3s;
+}
+
+.LinkIcon:hover,
+.instagram_link:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.instagram_link {
+    display: flex;
+    text-decoration: none;
+}

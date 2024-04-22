@@ -1,0 +1,83 @@
+.body {
+    padding: 0px 20px;
+}
+
+.post {
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: 20px;
+    max-width: 100%;
+    padding: 10px 20px;
+}
+
+.post:hover {
+    background-color: #343b43;
+    transition: 0.3s;
+}
+
+.post_content img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+
+.icon img {
+    border-radius: 50%;
+    border: 2px solid white;
+    height: 50px;
+    width: 50px;
+    margin: 10px 20px;
+}
+
+.pinned {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.name_and_emoji {
+    display: flex;
+    align-items: center;
+}
+
+.name_and_emoji div {
+    margin-right: 10px;
+}
+
+.emotion {
+    background-color: #343b43;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 10px 0px;
+    transition: 0.3s;
+}
+
+.emotion:hover {
+    background-color: #3c7e7d;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 10px 5px 10px 0px;
+}
+
+.lower_posts {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.title_and_status {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+    .icon img {
+        margin: 10px 10px 0px 0px;
+    }
+}

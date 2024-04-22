@@ -1,0 +1,27 @@
+.body {
+    display: flex;
+    align-items: center;
+}
+
+.name {
+    font-size: 30px;
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+.git_link {
+    display: flex;
+    align-items: center;
+    color: white;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.git_link:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.git_link svg {
+    margin-right: 5px;
+}
