@@ -1,3 +1,9 @@
+.main {
+    width: 90%;
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+}
+
 .main .links {
     display: flex;
     flex-direction: row;
@@ -12,10 +18,11 @@
     transition: 0.3s;
     font-size: 20px;
     font-weight: bold;
+    margin: 0px 5px;
 }
 
 .main .links div:hover {
-    background-color: #343b43;
+    background-color: #eeeeee;
     transition: 0.3s;
     cursor: pointer;
 }
@@ -26,5 +33,12 @@
 
 .links a {
     text-decoration: none;
-    color: white;
+    color: black;
+}
+
+@media screen and (max-width: 480px) {
+    .main .links div {
+        font-size: 15px;
+        font-weight: bold;
+    }
 }

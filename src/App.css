@@ -1,9 +1,8 @@
 .app {
     max-width: 700px;
     margin: 0 auto;
-    background-color: #3c7e7d;
-    background-color: #272d33;
-    color: white;
+    background-color: white;
+    color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,7 +10,7 @@
 }
 
 #root {
-    background-color: #292f36;
+    background-color: #fcfcfc;
 }
 
 body {
@@ -36,7 +35,7 @@ body {
 
 .spinner {
     border: 16px solid #f3f3f3;
-    border-top: 16px solid #3c7e7d;
+    border-top: 16px solid black;
     border-radius: 50%;
     width: 120px;
     height: 120px;
