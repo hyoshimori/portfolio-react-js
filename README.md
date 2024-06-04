@@ -5,6 +5,7 @@
 - **Birthdate:** 1991-12-09
 - **Status:** Available
 - **Skills:** HTML, CSS, JavaScript, React, Python, Elixir
+- **URL:** https://portfolio-react-js-zeta-red.vercel.app/
 
 ## Contact & Social Media
 - [Instagram](#)
