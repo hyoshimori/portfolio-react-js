@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect, useReducer } from "react";
 import "./App.css";
+import axios from "axios";
 
 import { Banner, Footer, Header, Main, Profile } from "./components/index";
 
@@ -8,6 +9,10 @@ import { BrowserRouter } from "react-router-dom";
 
 // Color Palette
 // https://coolors.co/292f36-4ecdc4-f7fff7-ff6b6b-ffe66d
+
+const api = axios.create({
+    baseURL: "http://127.0.0.1:8000/",
+});
 
 export const InitialContext = createContext(defaultPostProps);
 
@@ -44,6 +49,28 @@ function App(props) {
     );
     const [isLoading, setIsLoading] = useState(true);
     const [isAllImagesLoaded, setIsAllImagesLoaded] = useState(false);
+    const [, setUsers] = useState([]);
+
+    const getUsers = async () => {
+        try {
+            const response = await api.get("/users");
+            console.log("response", response.data);
+            return response.data;
+        } catch (error) {
+            console.error("Error fetching users", error);
+            throw error;
+        }
+    };
+
+    useEffect(() => {
+        getUsers()
+            .then((data) => {
+                setUsers(data);
+            })
+            .catch((error) => {
+                console.error("Error fetching users", error);
+            });
+    }, []);
 
     useEffect(() => {
         const timer = setTimeout(() => setIsLoading(false), 1000);
