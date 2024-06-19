@@ -43,6 +43,22 @@ const reducer = (state, action) => {
 };
 
 function App(props) {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post("http://localhost:8000/login", {
+                email,
+                password,
+            });
+            console.log("User logged in successfully:", response.data);
+        } catch (error) {
+            console.error("Login error:", error.response);
+        }
+    };
+
     const [state, dispatch] = useReducer(reducer, isImagesFullyLoaded);
     const [initialProps, setInitialProps] = useState(
         props.initialProps || defaultPostProps
@@ -53,7 +69,7 @@ function App(props) {
 
     const getUsers = async () => {
         try {
-            const response = await api.get("/users");
+            const response = await api.get("/");
             console.log("response", response.data);
             return response.data;
         } catch (error) {
@@ -100,6 +116,29 @@ function App(props) {
             value={{ initialProps, setInitialProps, state, dispatch }}
         >
             <BrowserRouter>
+
+                <form onSubmit={handleLogin}>
+                    <label>
+                        Email:
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+                    </label>
+                    <label>
+                        Password:
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.targetValueType)}
+                            required
+                        />
+                    </label>
+                    <button type="submit">Log In</button>
+                </form>
+
                 <div className="app">
                     <Header />
                     <Banner />
